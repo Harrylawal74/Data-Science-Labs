@@ -33,3 +33,19 @@ plt.hist(data,edges)
 plt.show()
 '''
 
+'''
+binsize = 1
+edges = np.arange(-5,8,binsize) # varying the step size in the sequence means changing the number of bins.
+plt.hist(data, edges, density=True) #normalise the y values to get a probability density function (pdf)
+'''
+
+'''
+binsize = 1
+edges = np.arange(-5,8,binsize) # varying the step size in the sequence means changing the number of bins. Consider what happens when changing the value of binsize
+plt.hist(data, edges, density=True)
+x = np.arange(-5,8,0.05) # the x values over which I want the PDF
+y = stats.norm.pdf(x,mu,sigma)
+plt.plot(x,y,'r-') # plot with red line
+plt.show()
+'''
+
